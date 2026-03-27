@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NMG Jam Spring 2026"
-run/main_scene="uid://bmtpmpms23i6"
+run/main_scene="uid://dxfpp3c8w8x1f"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="res://2D Art/Icon/icon.svg"

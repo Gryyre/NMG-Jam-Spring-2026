@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://475afxh2squw"]
+
+[resource]
+resource_name = "standardSurface2"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+normal_enabled = true
+normal_scale = 0.0
