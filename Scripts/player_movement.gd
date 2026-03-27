@@ -8,7 +8,7 @@ var keyboard_camera_sensitivity = 10
 @onready var camera: Camera3D = %Camera
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		rotate_camera(event.relative)
 
 func rotate_camera(input: Vector2) -> void:
@@ -27,6 +27,11 @@ func handle_keyboard_camera_control() -> void:
 
 func _physics_process(delta: float) -> void:
 	handle_keyboard_camera_control()
+	
+	if Input.is_action_just_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	elif Input.is_action_just_pressed("interact"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	# Add the gravity.
 	if not is_on_floor():
