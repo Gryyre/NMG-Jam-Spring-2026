@@ -24,7 +24,5 @@ transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49
 [node name="AudioTest" parent="." instance=ExtResource("3_50ct6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
 [node name="Mansion" parent="." instance=ExtResource("4_hb2xm")]
 transform = Transform3D(-8, 0, -6.993822e-07, 0, 8, 0, 6.993822e-07, 0, -8, 0, 0.5, -10)
