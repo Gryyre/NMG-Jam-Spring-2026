@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d5ghuanahixl"
+path="res://.godot/imported/audio_test_sound_short.mp3-d8588b4d1f166f755f4c0040df67816d.mp3str"
+
+[deps]
+
+source_file="res://Audio/Sound Effects/audio_test_sound_short.mp3"
+dest_files=["res://.godot/imported/audio_test_sound_short.mp3-d8588b4d1f166f755f4c0040df67816d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

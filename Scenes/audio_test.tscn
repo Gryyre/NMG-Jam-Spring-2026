@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv6ivw6vmrdn"]
+
+[ext_resource type="Script" uid="uid://bfgurj4emwg20" path="res://Scripts/audio_test.gd" id="1_b51bd"]
+
+[node name="AudioTest" type="Node3D"]
+script = ExtResource("1_b51bd")

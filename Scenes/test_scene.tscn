@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmtpmpms23i6"]
+[gd_scene load_steps=6 format=3 uid="uid://bmtpmpms23i6"]
 
 [ext_resource type="PackedScene" uid="uid://bv11h0n4p01kv" path="res://Scenes/player.tscn" id="1_3dogw"]
 [ext_resource type="Texture2D" uid="uid://qp4t2h5vu3mu" path="res://3D Art/Placeholder Textures/texture_08.png" id="2_r5l72"]
+[ext_resource type="PackedScene" uid="uid://dv6ivw6vmrdn" path="res://Scenes/audio_test.tscn" id="3_50ct6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50ct6"]
 albedo_texture = ExtResource("2_r5l72")
@@ -22,3 +23,6 @@ mesh = SubResource("BoxMesh_3dogw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 7, 0)
+
+[node name="AudioTest" parent="." instance=ExtResource("3_50ct6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)

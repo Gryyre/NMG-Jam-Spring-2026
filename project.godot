@@ -23,6 +23,17 @@ buses/default_bus_layout="uid://df21ymi4163c"
 
 Global="*res://Scenes/global.tscn"
 
+[file_customization]
+
+folder_colors={
+"res://2D Art/": "red",
+"res://3D Art/": "orange",
+"res://Audio/": "yellow",
+"res://Resources/": "green",
+"res://Scenes/": "blue",
+"res://Scripts/": "purple"
+}
+
 [input]
 
 move_forward={
