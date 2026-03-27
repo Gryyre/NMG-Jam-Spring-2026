@@ -1,15 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://bmtpmpms23i6"]
 
 [ext_resource type="PackedScene" uid="uid://bv11h0n4p01kv" path="res://Scenes/player.tscn" id="1_3dogw"]
-[ext_resource type="Texture2D" uid="uid://qp4t2h5vu3mu" path="res://3D Art/Placeholder Textures/texture_08.png" id="2_r5l72"]
+[ext_resource type="Material" uid="uid://b6aqklb1ccadr" path="res://3D Art/Generic Materials/Placeholder Material.tres" id="2_50ct6"]
 [ext_resource type="PackedScene" uid="uid://dv6ivw6vmrdn" path="res://Scenes/audio_test.tscn" id="3_50ct6"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_50ct6"]
-albedo_texture = ExtResource("2_r5l72")
-uv1_triplanar = true
+[ext_resource type="PackedScene" uid="uid://bj4ym8ndfi74v" path="res://3D Art/Mansion/Placeholder mansion.tscn" id="4_hb2xm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3dogw"]
-material = SubResource("StandardMaterial3D_50ct6")
+material = ExtResource("2_50ct6")
 size = Vector3(50, 1, 50)
 
 [node name="TestScene" type="Node3D"]
@@ -26,3 +23,8 @@ transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49
 
 [node name="AudioTest" parent="." instance=ExtResource("3_50ct6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Mansion" parent="." instance=ExtResource("4_hb2xm")]
+transform = Transform3D(-8, 0, -6.993822e-07, 0, 8, 0, 6.993822e-07, 0, -8, 0, 0.5, -10)

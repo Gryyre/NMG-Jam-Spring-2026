@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj4ym8ndfi74v"]
+
+[ext_resource type="PackedScene" uid="uid://cte0kihcxs4u5" path="res://3D Art/Mansion/Placeholder mansion.glb" id="1_12o3o"]
+
+[node name="Mansion" instance=ExtResource("1_12o3o")]
