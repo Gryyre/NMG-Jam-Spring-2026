@@ -1,3 +1,4 @@
+// https://godotshaders.com/shader/the-simplest-outline-shader-via-material/
 shader_type spatial;
 render_mode blend_mix, cull_front, unshaded;
 

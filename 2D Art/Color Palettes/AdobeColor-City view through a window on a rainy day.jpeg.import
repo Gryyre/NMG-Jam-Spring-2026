@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bl52uefuq2avn"
-path="res://.godot/imported/AdobeColor-City view through a window on a rainy day.jpeg-aaf0e6bf326c30ebd70244770cc97d41.ctex"
+path="res://.godot/imported/AdobeColor-City view through a window on a rainy day.jpeg-1df85deea90eabb34fb2756134724d23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2D Art/Icon/AdobeColor-City view through a window on a rainy day.jpeg"
-dest_files=["res://.godot/imported/AdobeColor-City view through a window on a rainy day.jpeg-aaf0e6bf326c30ebd70244770cc97d41.ctex"]
+source_file="res://2D Art/Color Palettes/AdobeColor-City view through a window on a rainy day.jpeg"
+dest_files=["res://.godot/imported/AdobeColor-City view through a window on a rainy day.jpeg-1df85deea90eabb34fb2756134724d23.ctex"]
 
 [params]
 
