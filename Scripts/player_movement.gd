@@ -57,3 +57,8 @@ func handle_movement(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	move_and_slide()
+
+func move_to_spawn_point(spawn_name: String) -> void:
+	for exit: Area3D in get_tree().get_nodes_in_group("Exit"):
+		if exit.exit_name == spawn_name:
+			global_position = exit.spawn_marker.global_position

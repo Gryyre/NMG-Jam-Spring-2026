@@ -15,7 +15,7 @@ func _ready() -> void:
 	#print_palette()
 	
 	var i: int = 0
-	for node: Node in get_children():
+	for node: Node in get_tree().get_first_node_in_group("Scalable").get_children():
 		if not (node is MeshInstance3D): continue
 		
 		var mesh: Mesh = node.mesh

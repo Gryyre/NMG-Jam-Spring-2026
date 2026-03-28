@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crcn5c2ouqnej"
+path="res://.godot/imported/cooking fire.ogg-5f58dbba210fde5ba7e14b5a082a77e6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Sound Effects/cooking fire.ogg"
+dest_files=["res://.godot/imported/cooking fire.ogg-5f58dbba210fde5ba7e14b5a082a77e6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bxyyyt1g1cv0l"
+path="res://.godot/imported/floorboard 2.ogg-da4b14e37052eb2ea06a0dac3dd5b6c6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Sound Effects/floorboard 2.ogg"
+dest_files=["res://.godot/imported/floorboard 2.ogg-da4b14e37052eb2ea06a0dac3dd5b6c6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

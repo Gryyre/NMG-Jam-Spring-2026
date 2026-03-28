@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://qa3vah3d5p15"]
+[gd_scene load_steps=7 format=3 uid="uid://qa3vah3d5p15"]
 
 [ext_resource type="Script" uid="uid://ffkd8opylvsk" path="res://Scripts/gui.gd" id="1_qyd3e"]
+[ext_resource type="Texture2D" uid="uid://chnbv3s2kuu0q" path="res://2D Art/Icon/Key_0.PNG" id="2_bm56d"]
 
 [sub_resource type="Animation" id="Animation_aud02"]
 resource_name = "Fade In"
@@ -18,21 +19,6 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_qyd3e"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_bm56d"]
 resource_name = "Fade Out"
 length = 0.3
@@ -47,6 +33,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qyd3e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bm56d"]
@@ -91,3 +92,33 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_bm56d")
 }
+
+[node name="GUILayer" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="Control" type="Control" parent="GUILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GUILayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -947.0
+offset_bottom = -443.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5372549)
+
+[node name="KeyGUI" type="TextureRect" parent="GUILayer/Control/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 2048.0
+offset_bottom = 2048.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_bm56d")

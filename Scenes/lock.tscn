@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7vlbjd4062kl"]
 
 [ext_resource type="Script" uid="uid://btegbv6rybjjl" path="res://Scripts/lock.gd" id="1_nv4u3"]
-[ext_resource type="PackedScene" uid="uid://vgc3dbnisvwt" path="res://3D Art/Day3_3DModels/Lock.glb" id="1_xn2vg"]
+[ext_resource type="PackedScene" uid="uid://vgc3dbnisvwt" path="res://3D Art/Objects/Lock.glb" id="1_xn2vg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn2vg"]
 size = Vector3(6.195, 5.805, 5.426)

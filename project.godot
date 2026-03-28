@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NMG Jam Spring 2026"
-run/main_scene="uid://dxfpp3c8w8x1f"
+run/main_scene="uid://beaoh1fbr2oah"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="uid://dg57iyle80gns"
@@ -39,6 +39,9 @@ folder_colors={
 [global_group]
 
 Player=""
+Exit=""
+"Spawn Point"=""
+Scalable=""
 
 [input]
 

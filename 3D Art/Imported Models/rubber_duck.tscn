@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dql03p7wl20dc"]
-
-[ext_resource type="PackedScene" uid="uid://c82elfynd5bue" path="res://3D Art/rubber_duck.fbx" id="1_wl1ob"]
-
-[node name="RubberDuck" instance=ExtResource("1_wl1ob")]

@@ -10,6 +10,7 @@ func _ready() -> void:
 func pick_up_key() -> void:
 	# Add key to inventory and mark it as not used yet
 	Global.inventory_keys[key_name] = false
+	GUI.add_key()
 	
 	get_tree().call_group("Player", "set_movement", false)
 	GUI.transition_scene_to(to_scene, to_scene_is_real)
