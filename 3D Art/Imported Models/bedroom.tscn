@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfwcmf3fmy6pt"]
+
+[ext_resource type="PackedScene" uid="uid://b7mq3dvjqe0wo" path="res://3D Art/Bedroom_2.fbx" id="1_4lc1q"]
+[ext_resource type="Script" uid="uid://df6wekxjim7s7" path="res://Scripts/stylize_meshes.gd" id="2_5lckk"]
+
+[node name="Bedroom" instance=ExtResource("1_4lc1q")]
+script = ExtResource("2_5lckk")
+mesh_colors = Array[Color]([Color(0.9019608, 0.2627451, 0.1254902, 1), Color(0.9019608, 0.53333336, 0.1254902, 1), Color(0.9019608, 0.36078432, 0.07058824, 1), Color(0.9019608, 0.07058824, 0.07058824, 1), Color(0.9019608, 0.62352943, 0.07058824, 1)])

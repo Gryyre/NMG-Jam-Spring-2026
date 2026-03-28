@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp1yk66dan26m"]
+
+[ext_resource type="PackedScene" uid="uid://cv8j8swqd1hvp" path="res://3D Art/Imported Models/hallway_upper.tscn" id="1_itcx3"]
+[ext_resource type="PackedScene" uid="uid://bv11h0n4p01kv" path="res://Scenes/player.tscn" id="2_aejm2"]
+
+[node name="HallwayUpper" type="Node3D"]
+
+[node name="HallwayUpper" parent="." instance=ExtResource("1_itcx3")]
+
+[node name="Player" parent="." instance=ExtResource("2_aejm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

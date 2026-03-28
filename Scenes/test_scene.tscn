@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bv11h0n4p01kv" path="res://Scenes/player.tscn" id="1_3dogw"]
 [ext_resource type="Material" uid="uid://b6aqklb1ccadr" path="res://3D Art/Generic Materials/Placeholder Material.tres" id="2_50ct6"]
 [ext_resource type="PackedScene" uid="uid://dv6ivw6vmrdn" path="res://Scenes/audio_test.tscn" id="3_50ct6"]
-[ext_resource type="PackedScene" uid="uid://bj4ym8ndfi74v" path="res://3D Art/Mansion/Placeholder mansion.tscn" id="4_hb2xm"]
-[ext_resource type="PackedScene" uid="uid://dudi4yuist5yh" path="res://3D Art/Mansion/kids_room.tscn" id="5_ak5v8"]
+[ext_resource type="PackedScene" uid="uid://bj4ym8ndfi74v" path="res://3D Art/Imported Models/Placeholder mansion.tscn" id="4_hb2xm"]
+[ext_resource type="PackedScene" uid="uid://dudi4yuist5yh" path="res://3D Art/Imported Models/kids_room.tscn" id="5_ak5v8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_3dogw"]
 material = ExtResource("2_50ct6")

@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var shader_material: ShaderMaterial
+@export var shader_material: ShaderMaterial = preload("res://Resources/Shaders/Outline Material.tres")
 @export var mesh_colors: Array[Color]
 
 const BASIC_MATERIAL = preload("res://3D Art/Generic Materials/Basic Material.tres")

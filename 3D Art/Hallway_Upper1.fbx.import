@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c5qkulrkxyvt6"
-path="res://.godot/imported/uploads_files_780645_Fishing_Ship_Asset.fbx-b9cb359a4e650c5d762dabd497aef632.scn"
+uid="uid://bld77qq0j2ak7"
+path="res://.godot/imported/Hallway_Upper1.fbx-f3489cd1fcfb3a44294a97fe69adacb1.scn"
 
 [deps]
 
-source_file="res://3D Art/uploads_files_780645_Fishing_Ship_Asset.fbx"
-dest_files=["res://.godot/imported/uploads_files_780645_Fishing_Ship_Asset.fbx-b9cb359a4e650c5d762dabd497aef632.scn"]
+source_file="res://3D Art/Hallway_Upper1.fbx"
+dest_files=["res://.godot/imported/Hallway_Upper1.fbx-f3489cd1fcfb3a44294a97fe69adacb1.scn"]
 
 [params]
 

@@ -7,6 +7,10 @@ var mouse_sensitivity = 0.008
 var keyboard_camera_sensitivity = 10
 @onready var camera: Camera3D = %Camera
 
+var movement_enabled: bool = true
+func set_movement(enabled: bool) -> void:
+	movement_enabled = enabled
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		#printt(event.screen_relative, rad_to_deg(rotation.y))
@@ -34,6 +38,10 @@ func _physics_process(delta: float) -> void:
 	elif Input.is_action_just_pressed("interact"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
+	if movement_enabled:
+		handle_movement(delta)
+
+func handle_movement(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

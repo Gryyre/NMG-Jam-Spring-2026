@@ -1,9 +1,17 @@
-[gd_scene load_steps=21 format=4 uid="uid://dudi4yuist5yh"]
+[gd_scene load_steps=22 format=4 uid="uid://dudi4yuist5yh"]
 
 [ext_resource type="PackedScene" uid="uid://g1baefhuulch" path="res://3D Art/Kids_Room_2.fbx" id="1_qsqqc"]
 [ext_resource type="Script" uid="uid://df6wekxjim7s7" path="res://Scripts/stylize_meshes.gd" id="2_86jot"]
-[ext_resource type="Material" uid="uid://dprvfwcomh3uf" path="res://Resources/Shaders/Outline Material.tres" id="3_1qy8e"]
 [ext_resource type="Material" uid="uid://475afxh2squw" path="res://3D Art/Generic Materials/Basic Material.tres" id="4_1qy8e"]
+[ext_resource type="PackedScene" uid="uid://c21mnnbhj8g4m" path="res://Scenes/Rooms/hallway_lower.tscn" id="4_7h468"]
+[ext_resource type="Script" uid="uid://deq1a7pknlmkv" path="res://Scripts/scene_exit.gd" id="4_a415j"]
+[ext_resource type="PackedScene" uid="uid://cp1yk66dan26m" path="res://Scenes/Rooms/hallway_upper.tscn" id="5_l4d2f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uvhym"]
+size = Vector3(10.136963, 1, 17.194336)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a415j"]
+size = Vector3(13.428223, 12.684326, 2.1297607)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1qy8e"]
 size = Vector3(90, 90, 1)
@@ -164,23 +172,33 @@ shadow_mesh = SubResource("ArrayMesh_ktp65")
 [sub_resource type="PlaneMesh" id="PlaneMesh_86jot"]
 size = Vector2(50, 50)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1qy8e"]
-sky_top_color = Color(0.38753444, 0.55023247, 0.76350003, 1)
-sky_horizon_color = Color(0.4998865, 0.67990047, 0.8092502, 1)
-
-[sub_resource type="Sky" id="Sky_7ysol"]
-sky_material = SubResource("ProceduralSkyMaterial_1qy8e")
-
-[sub_resource type="Environment" id="Environment_2ckgf"]
-background_mode = 2
-sky = SubResource("Sky_7ysol")
-
 [node name="KidsRoom" instance=ExtResource("1_qsqqc")]
 script = ExtResource("2_86jot")
-shader_material = ExtResource("3_1qy8e")
 mesh_colors = Array[Color]([Color(0.47843137, 0.7490196, 0.7058824, 1), Color(0.47843137, 0.61960787, 0.7490196, 1), Color(0.47843137, 0.7019608, 0.7490196, 1), Color(0.47843137, 0.7490196, 0.6156863, 1), Color(0.47843137, 0.53333336, 0.7490196, 1), Color(0.5176471, 0.69411767, 0.7294118, 1)])
 
-[node name="Collisions" type="Node3D" parent="." index="0"]
+[node name="Exits" type="Node3D" parent="." index="0"]
+
+[node name="ToLowerHallway" type="Area3D" parent="Exits" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 2, 21)
+collision_mask = 2
+script = ExtResource("4_a415j")
+to_scene = ExtResource("4_7h468")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exits/ToLowerHallway" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7279053, 0, -0.37060547)
+shape = SubResource("BoxShape3D_uvhym")
+
+[node name="ToHigherHallway" type="Area3D" parent="Exits" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 4, 35)
+collision_mask = 3
+script = ExtResource("4_a415j")
+to_scene = ExtResource("5_l4d2f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exits/ToHigherHallway" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2141113, 4.6048584, 0.5648804)
+shape = SubResource("BoxShape3D_a415j")
+
+[node name="Collisions" type="Node3D" parent="." index="1"]
 
 [node name="Wall1" type="StaticBody3D" parent="Collisions" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35)
@@ -212,31 +230,28 @@ transform = Transform3D(1.9106855e-15, 1, -4.371139e-08, 4.371139e-08, -4.371139
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/Floor" index="0"]
 shape = SubResource("BoxShape3D_1qy8e")
 
-[node name="Light" parent="." index="3"]
+[node name="Light" parent="." index="4"]
 light_energy = 5.216
 
-[node name="Spot" parent="." index="4"]
+[node name="Spot" parent="." index="5"]
 light_energy = 4.557
 
-[node name="Spot_001" parent="." index="5"]
+[node name="Spot_001" parent="." index="6"]
 light_energy = 3.072
 
-[node name="polySurface146_057" parent="." index="37"]
+[node name="polySurface146_057" parent="." index="38"]
 mesh = SubResource("ArrayMesh_dj3pm")
 
-[node name="polySurface146_127" parent="." index="76"]
+[node name="polySurface146_127" parent="." index="77"]
 mesh = SubResource("ArrayMesh_adq4b")
 
-[node name="polySurface146_143" parent="." index="86"]
+[node name="polySurface146_143" parent="." index="87"]
 mesh = SubResource("ArrayMesh_jdyqp")
 
-[node name="polySurface146_159" parent="." index="99"]
+[node name="polySurface146_159" parent="." index="100"]
 mesh = SubResource("ArrayMesh_7ysol")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="109"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="110"]
 transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 0, 18, 40)
 visible = false
 mesh = SubResource("PlaneMesh_86jot")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="110"]
-environment = SubResource("Environment_2ckgf")

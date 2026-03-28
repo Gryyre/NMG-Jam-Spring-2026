@@ -14,4 +14,5 @@ func transition_scene_to(new_scene: PackedScene, scene_is_reality: bool = true) 
 	if scene_is_reality: Global.play_BGM_real()
 	else: Global.play_BGM_imaginary()
 	
+	get_tree().call_group("Player", "set_movement", true)
 	transition_anim.play("Fade Out")
