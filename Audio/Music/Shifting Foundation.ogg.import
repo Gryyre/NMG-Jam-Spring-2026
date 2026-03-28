@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d3l7d4eigvtlr"
+path="res://.godot/imported/Shifting Foundation.ogg-fc5b12f8d0cb398939b311a48ccd7e83.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Shifting Foundation.ogg"
+dest_files=["res://.godot/imported/Shifting Foundation.ogg-fc5b12f8d0cb398939b311a48ccd7e83.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

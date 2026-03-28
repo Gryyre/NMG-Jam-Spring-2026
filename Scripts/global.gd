@@ -1,6 +1,8 @@
 extends Node
 
 @onready var rng: RandomNumberGenerator = RandomNumberGenerator.new()
+@onready var BGM_real: AudioStreamPlayer = %RealBGM
+@onready var BGM_imaginary: AudioStreamPlayer = %ImaginaryBGM
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -20,3 +22,13 @@ func play_sound(global_pos: Vector3, audio_file: AudioStream, volume_adjustment:
 	audio_player.global_position = global_pos
 	audio_player.finished.connect(audio_player.queue_free) # Delete the *audio player*, not the Global node...
 	audio_player.play()
+
+func play_BGM_real() -> void:
+	BGM_imaginary.stop()
+	if not BGM_real.playing:
+		BGM_real.play()
+
+func play_BGM_imaginary() -> void:
+	BGM_real.stop()
+	if not BGM_imaginary.playing:
+		BGM_imaginary.play()

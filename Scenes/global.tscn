@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bekm211be6j6h"]
+[gd_scene load_steps=4 format=3 uid="uid://bekm211be6j6h"]
 
 [ext_resource type="Script" uid="uid://cim8h4c2p0xmn" path="res://Scripts/global.gd" id="1_koean"]
+[ext_resource type="AudioStream" uid="uid://d3l7d4eigvtlr" path="res://Audio/Music/Shifting Foundation.ogg" id="2_yl8w0"]
+[ext_resource type="AudioStream" uid="uid://2184lt3ml0t3" path="res://Audio/Music/Parallax Transformation.mp3" id="3_pklo1"]
 
 [node name="Global" type="Node"]
 process_mode = 3
 script = ExtResource("1_koean")
+
+[node name="RealBGM" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_yl8w0")
+bus = &"Music"
+
+[node name="ImaginaryBGM" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_pklo1")
+bus = &"Music"

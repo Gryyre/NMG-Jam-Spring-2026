@@ -3,13 +3,14 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-var mouse_sensitivity = 0.005
+var mouse_sensitivity = 0.008
 var keyboard_camera_sensitivity = 10
 @onready var camera: Camera3D = %Camera
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotate_camera(event.relative)
+		#printt(event.screen_relative, rad_to_deg(rotation.y))
+		rotate_camera(event.screen_relative)
 
 func rotate_camera(input: Vector2) -> void:
 	# Rotate body for horizontal rotation

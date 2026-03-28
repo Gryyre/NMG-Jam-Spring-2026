@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://qa3vah3d5p15"]
+
+[ext_resource type="Script" uid="uid://ffkd8opylvsk" path="res://Scripts/gui.gd" id="1_qyd3e"]
+
+[sub_resource type="Animation" id="Animation_aud02"]
+resource_name = "Fade In"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qyd3e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bm56d"]
+resource_name = "Fade Out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bm56d"]
+_data = {
+&"Fade In": SubResource("Animation_aud02"),
+&"Fade Out": SubResource("Animation_bm56d"),
+&"RESET": SubResource("Animation_qyd3e")
+}
+
+[node name="GUI" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qyd3e")
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ScreenTransition" type="Control" parent="TransitionLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="TransitionLayer/ScreenTransition"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="TransitionAnim" type="AnimationPlayer" parent="TransitionLayer/ScreenTransition"]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_bm56d")
+}
