@@ -20,11 +20,12 @@ func _ready() -> void:
 		
 		var mesh: Mesh = node.mesh
 		
-		if not mesh.surface_get_material(0):
-			mesh.surface_set_material(0, BASIC_MATERIAL)
+		#if not mesh.surface_get_material(0):
+		for surface_num in mesh.get_surface_count():
+			mesh.surface_set_material(surface_num, BASIC_MATERIAL.duplicate())
 		
 		# Get a unique duplicate of the mesh's material
-		var mesh_material: StandardMaterial3D = mesh.surface_get_material(0).duplicate()
+		
 		
 		# Meshes are assigned random colors within their palette
 		# However the colors should be consistent between playthroughs,
@@ -32,17 +33,18 @@ func _ready() -> void:
 		Global.rng.set_seed(hash(i))
 		#printt(node.position, Global.rng.seed, Global.rng.randi_range(0, mesh_colors.size() - 1))
 		
-		mesh_material.albedo_color = mesh_colors[
-			Global.rng.randi_range(0, mesh_colors.size() - 1)
-		]
+		for surface_num in mesh.get_surface_count():
+			var mesh_material: StandardMaterial3D = mesh.surface_get_material(surface_num)
+			mesh_material.albedo_color = mesh_colors[
+				Global.rng.randi_range(0, mesh_colors.size() - 1)
+			]
+			mesh.surface_set_material(surface_num, mesh_material)
+			
+			# Automatically set the next pass of each mesh's material to be the shader material
+			mesh_material.next_pass = shader_material
 		
 		#print_rich("[color=#{color}]{mesh}".format(
 			#{"color": mesh_material.albedo_color.to_html(false), "mesh": node.name}
 		#))
-		
-		mesh.surface_set_material(0, mesh_material)
-		
-		# Automatically set the next pass of each mesh's main material to be the shader material
-		mesh_material.next_pass = shader_material
 		
 		i += 1

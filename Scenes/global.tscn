@@ -11,6 +11,7 @@ script = ExtResource("1_koean")
 [node name="RealBGM" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("2_yl8w0")
+autoplay = true
 bus = &"Music"
 
 [node name="ImaginaryBGM" type="AudioStreamPlayer" parent="."]

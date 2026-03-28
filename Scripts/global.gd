@@ -4,7 +4,9 @@ extends Node
 @onready var BGM_real: AudioStreamPlayer = %RealBGM
 @onready var BGM_imaginary: AudioStreamPlayer = %ImaginaryBGM
 
-var inventory_keys: Array[String] = []
+# Key: name of literal key
+# Value: is key used yet
+var inventory_keys: Dictionary = {}
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

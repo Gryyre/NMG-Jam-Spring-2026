@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7vlbjd4062kl"]
+
+[ext_resource type="Script" uid="uid://btegbv6rybjjl" path="res://Scripts/lock.gd" id="1_nv4u3"]
+[ext_resource type="PackedScene" uid="uid://vgc3dbnisvwt" path="res://3D Art/Day3_3DModels/Lock.glb" id="1_xn2vg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xn2vg"]
+size = Vector3(6.195, 5.805, 5.426)
+
+[node name="Lock" type="Node3D"]
+script = ExtResource("1_nv4u3")
+
+[node name="Lock" parent="." instance=ExtResource("1_xn2vg")]
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8925879, 2.658064)
+shape = SubResource("BoxShape3D_xn2vg")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
